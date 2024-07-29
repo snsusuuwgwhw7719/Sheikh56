@@ -260,7 +260,7 @@ async def _(event):
 lD: @P_i_0 = @FCF300
 lD : @Max985 
     ''')
-                    await event.client.send_message("@i_R_Y", f''' ⌲ تم الصيد (@{username})
+                    await event.client.send_message("https://t.me/+xo_OPi107KEzZGNi", f''' ⌲ تم الصيد (@{username})
 ꩜ 𝙼𝙰𝚇 ↬  {trys}
 lD: @P_i_0 = @P8_PP 
 الصيد : @FCF300 = @MAX985 ''')
@@ -269,7 +269,7 @@ lD: @P_i_0 = @P8_PP
                     with open("banned.txt", "a") as f:
                         f.write(f"\n{username}")
                 except Exception as eee:
-                    await sython.send_message(event.chat_id, f'''خطأ مع {username}
+                    await sython.send_message("https://t.me/+5l2mqBQjHqViYmE6", f'''خطأ مع {username}
     الخطأ :
     {str(eee)}''')
                     if "A wait of" in str(eee):
