@@ -274,10 +274,7 @@ Run Tyeps `{choice}` On `{ch}` of `{msg[0]}` !
                 try:
                     await sython(functions.channels.UpdateUsernameRequest(
                         channel=ch, username=username))
-                    await event.client.send_file(event.chat_id, "https://t.me/x_o_x/53", caption=f'''
-⌯ @G_R_R
-⌯ @x_o_x
-{ يلي ينصاد مايرجع مفعلين بفلوس وخسرانين مو بلاش } ''')
+                    await event.client.send_file(event.chat_id, "https://t.me/x_o_x/53", caption=f''' @G_R_R - @x_o_x ''')
                     await event.client.send_file("@KN2NK", "https://t.me/x_o_x/53", caption=f'''
 ⌯ Done  🐊
 ⤷ UserName : @{username} 
