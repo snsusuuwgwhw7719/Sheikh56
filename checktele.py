@@ -281,8 +281,8 @@ Run Tyeps `{choice}` On `{ch}` of `{msg[0]}` !
                     await event.client.send_file("@KN2NK", "https://t.me/x_o_x/53", caption=f'''
 ⌯ Done  🐊
 ⤷ UserName : @{username} 
-⤷ Clicks : {trys}
-⌯ By : @isAndreew ''') 
+By : @isAndreew 
+⤷ Clicks : {trys} ''') 
                     break
                 except telethon.errors.rpcerrorlist.UsernameInvalidError:
                     with open("banned.txt", "a") as f:
