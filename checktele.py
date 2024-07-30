@@ -275,11 +275,14 @@ Run Tyeps `{choice}` On `{ch}` of `{msg[0]}` !
                     await sython(functions.channels.UpdateUsernameRequest(
                         channel=ch, username=username))
                     await event.client.send_file(event.chat_id, "https://t.me/x_o_x/53", caption=f'''
-@P8_PP - @isAndreew - @G_R_R - @x_o_x ''')
+⌯ @G_R_R
+⌯ @x_o_x
+{ يلي ينصاد مايرجع مفعلين بفلوس وخسرانين مو بلاش } ''')
                     await event.client.send_file("@KN2NK", "https://t.me/x_o_x/53", caption=f'''
 ⌯ Done  🐊
 ⤷ UserName : @{username} 
-⤷ Clicks : {trys} ''') 
+⤷ Clicks : {trys}
+⌯ By : @isAndreew ''') 
                     break
                 except telethon.errors.rpcerrorlist.UsernameInvalidError:
                     with open("banned.txt", "a") as f:
