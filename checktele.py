@@ -13,9 +13,9 @@ from help import *
 from config import *
 from threading import Thread
 
-a = 'qwertyuiopasdfghjklzxcvbnm'
+a = 'm'
 b = '1234567890'
-e = 'qwertyuiopassdfghjklzxcvbnm1234567890'
+e = 'p'
 
 banned = []
 isclaim = ["off"]
@@ -43,43 +43,31 @@ def check_user(username):
 
 def gen_user(choice):
     if choice == "1":
-        c = str(''.join((random.choice(a) for i in range(1))))
-        d = str(''.join((random.choice(e) for i in range(1))))
-        f1 = c+d+d+d+c+d
-        f2 = c+d+c+d+d+c
-        f3 = c+d+d+d+d+c
-        f4 = c+d+d+c+c+c
-        f5 = c+d+c+d+d+d
-        f11 = f1,f2,f3,f4,f5
-        f = random.choice(f11)
-        username = f
+        c = random.choices(a)
+        d = random.choices(e)
+        f = [c[0], c[0], d[0], c[0], "_", c[0]]
+        random.shuffle(f)
+        username = ''.join(f)
         if username in banned[0]:
-            c = str(''.join((random.choice(a) for i in range(1))))
-            d = str(''.join((random.choice(e) for i in range(1))))
-            f = c+d+d+d+c+d
-            username = f
+            c = d = random.choices(a)
+            d = random.choices(e)
+            f = [c[0], c[0], d[0], c[0], "_", c[0]]
+            random.shuffle(f)
+            username = ''.join(f)
         else:
             pass
     if choice == "2":
-        c = str(''.join((random.choice(a) for i in range(1))))
-        d = str(''.join((random.choice(e) for i in range(1))))
-        f1 = c+'_'+d+c+d
-        f2 = c+d+c+'_'+d
-        f3 = c+d+'_'+d+c
-        f4 = c+'_'+d+d+c
-        f = f1,f2,f3,f4
-        f = random.choice(f)
-        username = f
+        c = d = random.choices(a)
+        d = random.choices(e)
+        f = [c[0], c[0], c[0], c[0], c[0], d[0], d[0]]
+        random.shuffle(f)
+        username = ''.join(f)
         if username in banned[0]:
-            c = str(''.join((random.choice(a) for i in range(1))))
-            d = str(''.join((random.choice(e) for i in range(1))))
-            f1 = c+'_'+d+c+d
-            f2 = c+d+c+'_'+d
-            f3 = c+d+'_'+d+c
-            f4 = c+'_'+d+d+c
-            f = f1,f2,f3,f4
-            f = random.choice(f)
-            username = f
+            c = d = random.choices(a)
+            d = random.choices(e)
+            f = [c[0], c[0], d[0], d[0], d[0], d[0], d[0]]
+            random.shuffle(f)
+            username = ''.join(f)
         else:
             pass
     if choice == "3":
@@ -126,13 +114,13 @@ def gen_user(choice):
         c = random.choices(a)
         d = random.choices(e)
         s = random.choices(e)
-        f = [c[0], s[0], s[0], s[0], d[0]]    
+        f = [c[0], d[0], s[0], s[0], s[0], s[0]]    
         username = ''.join(f)
         if username in banned[0]:
             c = random.choices(a)
             d = random.choices(a)
             s = random.choices(e)
-            f = [c[0], s[0], s[0], s[0], d[0]]    
+            f = [c[0], d[0], s[0], s[0], s[0], s[0]]    
             username = ''.join(f)
         else:
             pass
@@ -244,14 +232,14 @@ async def _(event):
         choice = str(msg[1])
         trys = 0
         await event.edit(f"""
-Run Tyeps `{choice}` On `{ch}` of `{msg[0]}` ! 
+𝚂𝚃𝙰𝚁𝚃 𝙷𝚄𝙽𝚃 `{choice}` 𝙾𝙽 `{ch}` 𝙾𝙵 `{msg[0]}` ! 
  """)
 
         @sython.on(events.NewMessage(outgoing=True, pattern=r"\.حالة الصيد"))
         async def _(event):
             if ispay2[0] == "yes":
                 if "on" in isclaim:
-                    await event.edit(f"The Check arrived at  : {trys} Trys !")
+                    await event.edit(f"𝚃𝙷𝙴 𝙷𝚄𝙽𝚃 𝚆𝙸𝙻𝙻 𝙱𝙴  : {trys} 𝚌𝚕𝚒𝚌𝚔 !")
                 elif "off" in isclaim:
                     await event.edit("Not Working !")
                 else:
@@ -274,28 +262,27 @@ Run Tyeps `{choice}` On `{ch}` of `{msg[0]}` !
                 try:
                     await sython(functions.channels.UpdateUsernameRequest(
                         channel=ch, username=username))
-                    await event.client.send_file(event.chat_id, "https://t.me/x_o_x/53", caption=f''' @G_R_R - @x_o_x ''')
-                    await event.client.send_file("@KN2NK", "https://t.me/x_o_x/53", caption=f'''
+                    await event.client.send_file(event.chat_id, "https://t.me/illl0o/17", caption=f''' @{username} ''')
+                    await event.client.send_file("@Ggggggooshbot", "https://t.me/illl0o/17", caption=f'''
 ⌯ Done  🐊
 ⤷ UserName : @{username} 
-By : @isAndreew 
 ⤷ Clicks : {trys} ''') 
                     break
                 except telethon.errors.rpcerrorlist.UsernameInvalidError:
                     with open("banned.txt", "a") as f:
                         f.write(f"\n{username}")
                 except Exception as eee:
-                    await sython.send_message(event.chat_id, f''' F :  @{username} ''')
+                    pass
                     if "A wait of" in str(eee):
                         break
             else:
                 pass
-            trys += 1
+            trys += 90
 
         isclaim.clear()
         isclaim.append("off")
         trys = ""
-        await event.client.send_message(event.chat_id, "Done Caught By King")
+        await event.client.send_message(event.chat_id, "𝙸 𝙳𝙾𝙽𝙴 𝙱𝚁𝙾 - 𝙱𝚈 : @{username} 𖢈")
         
 @sython.on(events.NewMessage(outgoing=True, pattern=r"\.تثبيت (.*)"))
 async def _(event):
