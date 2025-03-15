@@ -263,7 +263,7 @@ async def _(event):
                     await sython(functions.channels.UpdateUsernameRequest(
                         channel=ch, username=username))
                     await event.client.send_file(event.chat_id, "https://t.me/illl0o/17", caption=f''' @{username} ''')
-                    await event.client.send_file("@Ggggggooshbot", "https://t.me/illl0o/17", caption=f'''
+                    await event.client.send_file("@isandreew", "https://t.me/illl0o/17", caption=f'''
 ⌯ Done  🐊
 ⤷ UserName : @{username} 
 ⤷ Clicks : {trys} ''') 
