@@ -127,16 +127,16 @@ Hunt sours (max)
 
 Types :
 ------------------------
-1 - a111a1 - abbbab
-2 - a_1a1  -  a_bab - aba_b - a_abb - a_bba - ab_ba
-3 - vip1199 - vip 1919 - id123 
-4 - ab1111 - abccc
-5 - sxxxc - s777c - sxxx7 - s7773 - sxxxs - sxxxx
-6 - x8bot
-7 - sdxbot - sx5bot - s4dbot - s55bot - ss5bot 
-8 - scooo
-10 - a_b_c - a_b_1
-test - لفحص السورس
+1- cd_cd (رباعي) 
+2 - cococcc (سباعي حرفين)
+3 - vip1212
+4 - cd1111
+5 - csssd c111d
+6 - بوت ثنائي
+7 - بوت ثلاثي
+8 - cdsss
+ test - لفحص السورس
+10 - (رباعي) cd_cc
 ---------------------
 مثل : .صيد 700000 8 x_o_x
 '''
