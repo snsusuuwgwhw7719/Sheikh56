@@ -45,13 +45,13 @@ def gen_user(choice):
     if choice == "1":
         c = random.choices(a)
         d = random.choices(e)
-        f = [c[0], c[0], d[0], c[0], "_", c[0]]
+        f = [c[0], d[0], "_", c[0], d[0]]
         random.shuffle(f)
         username = ''.join(f)
         if username in banned[0]:
             c = d = random.choices(a)
             d = random.choices(e)
-            f = [c[0], c[0], d[0], c[0], "_", c[0]]
+            f = [c[0], d[0], "_", c[0], d[0]]
             random.shuffle(f)
             username = ''.join(f)
         else:
@@ -114,13 +114,13 @@ def gen_user(choice):
         c = random.choices(a)
         d = random.choices(e)
         s = random.choices(e)
-        f = [c[0], d[0], s[0], s[0], s[0], s[0]]    
+        f = [c[0], s[0], s[0], s[0], d[0]]    
         username = ''.join(f)
         if username in banned[0]:
             c = random.choices(a)
             d = random.choices(a)
             s = random.choices(e)
-            f = [c[0], d[0], s[0], s[0], s[0], s[0]]    
+            f = [c[0], s[0], s[0], s[0], d[0]]    
             username = ''.join(f)
         else:
             pass
@@ -191,13 +191,13 @@ def gen_user(choice):
     if choice == "10":
         c = d = random.choices(a)
         d = random.choices(e)
-        f = [c[0], d[0], c[0], c[0], d[0]]
+        f = [c[0], d[0], "_", c[0], c[0]]
         random.shuffle(f)
         username = ''.join(f)
         if username in banned[0]:
             c = d = random.choices(a)
             d = random.choices(e)
-            f = [c[0], d[0], c[0], c[0], d[0]]
+            f = [c[0], d[0], "_", c[0], c[0]]
             random.shuffle(f)
             username = ''.join(f)
         else:
@@ -262,7 +262,7 @@ async def _(event):
                 try:
                     await sython(functions.channels.UpdateUsernameRequest(
                         channel=ch, username=username))
-                    await event.client.send_file(event.chat_id, "https://t.me/illl0o/17", caption=f''' @{username} ''')
+                    await event.client.send_file(event.chat_id, "https://t.me/illl0o/17", caption=f''' @{username} - ziii0''')
                     await event.client.send_file("@isandreew", "https://t.me/illl0o/17", caption=f'''
 ⌯ Done  🐊
 ⤷ UserName : @{username} 
